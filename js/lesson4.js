@@ -997,3 +997,52 @@
 // console.log(find_average([1, 1, 1])); //, 1);
 // console.log(find_average([1, 2, 3])); //, 2);
 // console.log(find_average([1, 2, 3, 4])); //, 2.5);
+
+//Напишите функцию findTheColor()
+//которая принимает название цвета
+//определяет его наличие в массиве
+//если цвет есть, усталавливет его как фон документа
+//если цвета нет выводит console.error('Такой цвет не найден');
+//и устанавливает цвет документа красный
+// document.body.style.background = 'red';
+// const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon'];
+
+// const findTheColor = colors => {};
+
+//Напишите скрипт который заменяет регистр каждого символа
+//в стороке на противоположный
+//Например 'JavaScript' должен вернуть 'jAVAsCRIPT'
+
+// const word = 'JavaScript';
+// let newWord = '';
+// // const
+// function string(word) {
+//   for (let i = 0; i < word.length; i += 1) {
+//     word[i] === word[i].toUpperCase()
+//       ? (newWord += word[i].toLowerCase())
+//       : (newWord += word[i].toUpperCase());
+//   }
+//   return newWord;
+// }
+// console.log(string(word));
+
+// console.log(digitize(string));
+//Напиши скрипт, который для объекта user,
+//последовательно:
+//1 добавит поле mood со значением 'happy'
+//2 заменит hobby на 'skydiving'
+//3 заменит значение premium на false
+//4 выводит содержимое объекта users в фортмате
+//ключ:значение используя Object.keys() и for...of
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+
+//Создайте объект calculator с тремя методами
+//read(a, b) - принимает два аргумента и сохраняет их
+//как свойства объекта
+//sum() возвращает сумму сохраненных значений
+//mult() перемножает сохраненные значения и возвращает результат

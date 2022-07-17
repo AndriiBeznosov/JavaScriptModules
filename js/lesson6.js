@@ -609,16 +609,16 @@
 // const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
 //   firstStudent.name.localeCompare(secondStudent.name),
 // );
-const mas = [
-  1,
-  2,
-  3,
-  4,
-  ['A', 'B'],
-  [12, 13, 14, ['a', 'b', ['asd']]],
-  ['andrii'],
-];
-console.log(mas.flat(1));
-console.log(mas.flat(2));
-console.log(mas.flat(3));
-console.log(mas.flatMap(a => a));
+// const mas = [
+//   1,
+//   2,
+//   3,
+//   4,
+//   ['A', 'B'],
+//   [12, 13, 14, ['a', 'b', ['asd']]],
+//   ['andrii'],
+// ];
+// console.log(mas.flat(1));
+// console.log(mas.flat(2));
+// console.log(mas.flat(3));
+// console.log(mas.flatMap(a => a));

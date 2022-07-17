@@ -1,0 +1,126 @@
+p {
+  text-align: center;
+}
+/* version 1 */
+.container-title {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: brown;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 6em;
+  color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  transition: 500ms;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow: hidden;
+}
+h2:hover span:nth-child(1) {
+  transform: translateY(-18px);
+}
+h2 span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  transition: 500ms;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+h2:hover span:nth-child(2) {
+  transform: translateY(18px);
+}
+h2 span:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scaleY(0);
+  width: 91%;
+  color: #000;
+  background: #ff0;
+  font-size: 0.25em;
+  letter-spacing: 0.7em;
+  text-align: center;
+  padding-left: 20px;
+  margin-left: 5px;
+  transition: 500ms;
+}
+h2:hover span:nth-child(3) {
+  transform: translateY(-50%) scaleY(1);
+}
+/* version 2 */
+.link1 {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: rgb(5, 2, 79);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.link1 a {
+  position: relative;
+  padding: 10px 30px;
+  margin: 45px 0;
+  color: #21ebff;
+  text-decoration: none;
+  font-size: 50px;
+  text-transform: uppercase;
+  transition: 500ms;
+}
+.link1 a::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+.link1 a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+.link1 a:hover::before,
+.link1 a:hover::after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0ms;
+}
+.link1 a:hover {
+  background: #21ebff;
+  color: #000;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 500ms;
+}
