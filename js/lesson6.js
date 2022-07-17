@@ -622,3 +622,9 @@
 // console.log(mas.flat(2));
 // console.log(mas.flat(3));
 // console.log(mas.flatMap(a => a));
+function showThis() {
+  console.log('this in showThis: ', this);
+}
+
+// Вызываем в глобальном контексте
+showThis(); // this in showThis: Window
