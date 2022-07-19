@@ -622,9 +622,108 @@
 // console.log(mas.flat(2));
 // console.log(mas.flat(3));
 // console.log(mas.flatMap(a => a));
-function showThis() {
-  console.log('this in showThis: ', this);
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username}.`);
+// }
+
+// const mango = {
+//   username: 'Манго',
+// };
+// const poly = {
+//   username: 'Поли',
+// };
+
+// greetGuest.call(mango, 'Добро пожаловать'); // Добро пожаловать, Манго.
+// greetGuest.call(poly, 'С приездом'); // С приездом, Поли.
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
+
+// // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+// makeMessage(customer.getFullName.bind(customer)); // Обрабатываем заявку от Jacob Mercer.
+///////////////
+///////////////
+///////////////
+///////////////
+///////////////
+///////////////
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = 'Манго';
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+///////////////
+///////////////
+///////////////
+///////////////
+///////////////
+///////////////
+// const animal = { eats: true };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// for (const key in dog) {
+//   console.log(key); // barks, eats
+// }
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(newItem) {
+//     this.items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     this.items.filter(({ a }) => a !== itemToRemove);
+//   }
+// }
+
+// ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE;
+// // Change code above this line
+// const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem('Droid');
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem('Prolonger');
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+class User {
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
 }
 
-// Вызываем в глобальном контексте
-showThis(); // this in showThis: Window
+class ContentEditor extends User {
+  constructor({ email, posts }) {
+    // Вызов конструктора родительского класса User
+    super(email);
+    this.posts = posts;
+  }
+}
+
+const editor = new ContentEditor({ email: 'mango@mail.com', posts: [] });
+console.log(editor); // { email: 'mango@mail.com', posts: [] }
+console.log(editor.email); // 'mango@mail.com'

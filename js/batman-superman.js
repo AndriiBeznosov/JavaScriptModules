@@ -1,3 +1,7 @@
+function $(x) {
+  return document.getElementById(x);
+}
+
 $(function () {
   let option = $('.option'),
     _this,

@@ -5,7 +5,24 @@ body {
 p {
   text-align: center;
 }
-
+/* lesson 6 */
+.counter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.btn {
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+.tab {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin: 0 15px;
+  font-size: 44px;
+}
 /* option 1 */
 .container-title {
   margin: 0 auto;
