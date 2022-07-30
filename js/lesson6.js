@@ -57,7 +57,7 @@
 //     // this.balance += amount;
 //   },
 
-//   /*
+/*
 //    * Метод отвечающий за снятие суммы с баланса.
 //    * Принимает сумму танзакции.
 //    * Вызывает createTransaction для создания объекта транзакции
@@ -86,14 +86,14 @@
 //    * Метод ищет и возвращает объект транзации по id
 //    */
 //   getTransactionDetails(id) {
-//     // let tr = null;
-//     // for (let transaction of this.transactions) {
-//     //   if (transaction.id === id) {
-//     //     tr = { ...transaction };
-//     //     break;
-//     //   }
-//     // }
-//     // return tr;
+//     let tr = null;
+//     for (let transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         tr = { ...transaction };
+//         break;
+//       }
+//     }
+//     return tr;
 //   },
 
 //   /*
@@ -101,13 +101,13 @@
 //    * определенного типа транзакции из всей истории транзакций
 //    */
 //   getTransactionTotal(type) {
-//     // let sum = 0;
-//     // for (let transaction of this.transactions) {
-//     //   if (transaction.type === type) {
-//     //     sum += transaction.amount;
-//     //   }
-//     // }
-//     // return sum;
+//     let sum = 0;
+//     for (let transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         sum += transaction.amount;
+//       }
+//     }
+//     return sum;
 //   },
 // };
 ///////////////////////////////
@@ -702,28 +702,58 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 // storage.removeItem('Prolonger');
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-class User {
-  constructor(email) {
-    this.email = email;
-  }
+// const Car = function ({ brand, modal, price } = {}) {
+//   //   const { brand, modal, price } = config;
+//   this.brand = brand;
+//   this.modal = modal;
+//   this.price = price;
+//   //   this.changePrice = function (newPrice) {
+//   //     this.price = newPrice;
+//   //   };
+// };
+// Car.prototype.sayHi = function () {
+//   //   console.log('Car.prototype.sayHy -> this', this);
+//   //   console.log('Heloow ;)');
+// };
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
 
-  get email() {
-    return this.email;
-  }
+// const myCar = new Car({
+//   brand: 'Audi',
+//   modal: 'Q5',
+//   price: 50000,
+// });
 
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
+// myCar.sayHi();
+// myCar.changePrice(90000);
+// // console.table(myCar);
 
-class ContentEditor extends User {
-  constructor({ email, posts }) {
-    // Вызов конструктора родительского класса User
-    super(email);
-    this.posts = posts;
-  }
-}
+// const myCar2 = new Car({
+//   brand: 'BMW',
+//   modal: 'X5',
+//   price: 40000,
+// });
+// myCar2.sayHi();
+// // console.table(myCar2);
 
-const editor = new ContentEditor({ email: 'mango@mail.com', posts: [] });
-console.log(editor); // { email: 'mango@mail.com', posts: [] }
-console.log(editor.email); // 'mango@mail.com'
+// const myCar3 = new Car({
+//   brand: 'Citroen',
+//   modal: 'C5 AIRCROSS',
+//   price: 30000,
+// });
+// myCar3.sayHi();
+// // console.table(myCar3);
+
+// const User = function ({ email, password }) {
+//   this.email = email;
+//   this.password = password;
+// };
+// User.prototype.changeEmail = function (newMail) {
+//   this.email = newMail;
+// };
+
+// const newUser = new User({ email: 'asd@mail.com', password: 1111111 });
+// newUser.changeEmail('andrii@gmail.com');
+
+// console.table(newUser);
