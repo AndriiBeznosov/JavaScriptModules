@@ -70,7 +70,7 @@ function onTime() {
     seconds -= 1;
     refs.timSeconds.textContent = pad(seconds);
     refs.timMinutes.textContent = pad(minutes);
-  }, 100);
+  }, 1000);
 }
 function pad(value) {
   return String(value).padStart(2, 0);
