@@ -1,5 +1,5 @@
 body {
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0 20px;
 }
 p {
@@ -116,7 +116,7 @@ h2:hover span:nth-child(3) {
   }
 }
 .link1 a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -1px;
   left: -1px;
@@ -128,7 +128,7 @@ h2:hover span:nth-child(3) {
   transition-delay: 500ms;
 }
 .link1 a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   right: -1px;
@@ -206,7 +206,7 @@ h2:hover span:nth-child(3) {
 }
 
 .circle:before {
-  content: '';
+  content: "";
   width: 60px;
   left: -90px;
   background-color: #8898ff;
@@ -382,7 +382,7 @@ h2:hover span:nth-child(3) {
 }
 
 .toggle--label-background:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -5px;
   width: 40px;
@@ -394,7 +394,7 @@ h2:hover span:nth-child(3) {
 }
 
 .toggle--label-background:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   width: 40px;
@@ -410,7 +410,7 @@ h2:hover span:nth-child(3) {
   animation-duration: 350ms;
   animation-fill-mode: forwards;
   transition: all 350ms ease-in;
-  content: '';
+  content: "";
   width: 82px;
   height: 82px;
   border: 5px solid var(--yellow-border);
@@ -425,7 +425,7 @@ h2:hover span:nth-child(3) {
   transition-delay: 0ms;
   transition: all 250ms ease-in;
   position: absolute;
-  content: '';
+  content: "";
   box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
   left: 143px;
   top: 23px;
@@ -515,7 +515,7 @@ h2:hover span:nth-child(3) {
 
 .div-liquid a .liquid::after,
 .div-liquid a .liquid::before {
-  content: '';
+  content: "";
   width: 200%;
   height: 200%;
   position: absolute;

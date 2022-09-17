@@ -76,3 +76,119 @@ a {
   padding: 5px 10px;
   font-size: 24px;
 }
+.result-container {
+  display: flex;
+  text-align: center;
+}
+
+.time {
+  display: flex;
+  margin-left: 30px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px #212121;
+}
+.time.hidden {
+  display: none;
+}
+.tim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  padding: 5px 5px;
+}
+.tim1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  padding-bottom: 5px;
+  animation-name: opacityTim;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes opacityTim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.total-result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.175);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total-result-container {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background-color: white;
+  text-align: center;
+  font-size: 34px;
+  padding-top: 30px;
+  box-shadow: 1px 2px 3px#21212175;
+  border-radius: 10px;
+}
+.total-result.hidden {
+  display: none;
+}
+.correct {
+  color: green;
+  font-weight: 900;
+  font-size: 40px;
+}
+.errors {
+  color: red;
+  font-weight: 900;
+  font-size: 40px;
+}
+.btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 3px#212121;
+}
+.btn-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 15px;
+  height: 2px;
+  background-color: #212121;
+}
+.btn-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 2px;
+  background-color: #212121;
+}
