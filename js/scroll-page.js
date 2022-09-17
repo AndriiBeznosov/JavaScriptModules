@@ -109,6 +109,7 @@ function onSubmit(e) {
 }
 
 function renderGallery(photos) {
+  console.log(photos);
   if (photos.length < 10) {
     addClassHidden();
     button.disabled = false;
@@ -156,18 +157,18 @@ function onInput(e) {
 function clearGalleryPhoto() {
   list.innerHTML = "";
 }
-console.log("null: ", typeof null);
-console.log("undefined: ", typeof undefined);
-console.log("string: ", typeof "string");
-console.log("123: ", typeof 123);
-console.log("123n: ", typeof 123n);
-console.log("false: ", typeof false);
-console.log("function(){}: ", typeof function () {});
-console.log("{}: ", typeof {});
-console.log("symbol '123': ", typeof Symbol(123));
+// console.log("null: ", typeof null);
+// console.log("undefined: ", typeof undefined);
+// console.log("string: ", typeof "string");
+// console.log("123: ", typeof 123);
+// console.log("123n: ", typeof 123n);
+// console.log("false: ", typeof false);
+// console.log("function(){}: ", typeof function () {});
+// console.log("{}: ", typeof {});
+// console.log("symbol '123': ", typeof Symbol(123));
 
-function fn(n) {
-  return n.split("").reverse().join("");
-}
+// function fn(n) {
+//   return n.split("").reverse().join("");
+// }
 
-console.log(fn("Hellow world !!!"));
+// console.log(fn("Hellow world !!!"));
