@@ -1,0 +1,39 @@
+.form {
+  position: relative;
+  margin: 0 auto;
+  max-width: 300px;
+  margin-top: 54px;
+
+  @include tablet {
+    max-width: 336px;
+  }
+  @include desktop {
+    max-width: 394px;
+  }
+
+  &__input {
+    background: transparent;
+    border: 0;
+    width: 100%;
+    border-bottom: 0.5px solid #ffffff;
+    padding: 5px;
+    color: #ffffff;
+    &::placeholder {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.14;
+      color: #ffffff;
+    }
+  }
+
+  &__submit-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+  }
+}

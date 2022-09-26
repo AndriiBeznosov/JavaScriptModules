@@ -1,3 +1,18 @@
 {
-  "liveServer.settings.port": 5501
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/21-Filmoteca/src/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/21-Filmoteca/src/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.generateMap": true,
+  "liveServer.settings.port": 1234,
+  "liveSassCompile.settings.autoprefix": null
 }

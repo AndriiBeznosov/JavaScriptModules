@@ -1,0 +1,32 @@
+body {
+  background-color: aqua;
+}
+table {
+  border-spacing: 0;
+  border-collapse: inherit;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th {
+  padding: 5px 10px;
+  margin: 0;
+}
+.btn {
+  padding: 7px 15px;
+  background-color: green;
+  color: white;
+  border: transparent;
+  box-shadow: 1px 2px 3px #212121;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: -5px;
+}
+.js-results-list {
+  margin: 5px;
+}

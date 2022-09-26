@@ -1,0 +1,54 @@
+body {
+  background-color: rgba(0, 255, 255, 0.68);
+}
+.js-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+  box-shadow: 1px 2px 3px #212121;
+  padding: 10px 15px;
+  width: 200px;
+  border-radius: 3px;
+}
+img {
+  width: 100%;
+  box-shadow: 1px 2px 3px #212121;
+  border-radius: 3px;
+}
+li {
+  list-style: none;
+}
+.card-title,
+.list-text,
+.list-text,
+.list-group {
+  box-shadow: 1px 2px 3px #212121;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+.btn {
+  background-color: blue;
+  color: white;
+  box-shadow: 1px 2px 3px #212121;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: transparent;
+  cursor: pointer;
+}
+.btn:hover {
+  color: black;
+  background-color: rgb(86, 74, 193);
+}
+input {
+  padding: 5px 10px;
+  box-shadow: 1px 2px 3px #212121;
+  border: transparent;
+  border-radius: 3px;
+}
+.form-inline {
+  display: inline-flex;
+  align-items: center;
+}

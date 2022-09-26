@@ -1,0 +1,34 @@
+.btn {
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 1px 2px 3px #212121;
+  font-size: 16px;
+  background-color: yellowgreen;
+  border-radius: 5px;
+}
+.create-btn {
+  background-color: #a08ac8;
+}
+.container {
+  border: 1px solid #212121;
+}
+.container-btn {
+  outline: 2px solid orange;
+}
+.tags {
+  display: flex;
+  padding: 10px;
+}
+.tags__btn {
+  margin-left: 10px;
+  background-color: aqua;
+}
+.tags__btn--activ {
+  background-color: rgb(9, 21, 244);
+  color: #fff;
+  box-shadow: 1px 2px 3px #b30f0f;
+}
+
+li {
+  list-style: none;
+}

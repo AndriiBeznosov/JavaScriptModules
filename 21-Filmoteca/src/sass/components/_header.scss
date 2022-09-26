@@ -1,0 +1,150 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.56);
+  padding: 40px 20px 44px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  &--main {
+    @include desktop {
+      background-image: url(/21-Filmoteca/src/img/images-min/header-desk.jpg);
+    }
+    @include tablet {
+      background-image: url(/21-Filmoteca/src/img/images-min/header-tab.jpg);
+    }
+    @include mobile-max {
+      background-image: url(/21-Filmoteca/src/img/images-min/header-mob.jpg);
+    }
+  }
+  &--library {
+    @include desktop {
+      background-image: url(/21-Filmoteca/src/img/images-min/header2-desk.jpg);
+    }
+    @include tablet {
+      background-image: url(/21-Filmoteca/src/img/images-min/header2-tab.jpg);
+    }
+    @include mobile-max {
+      background-image: url(/21-Filmoteca/src/img/images-min/header2-mob.jpg);
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu {
+    font-size: 12px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-left: auto;
+    &:last-child {
+      margin-left: 39px;
+    }
+    &:last-child {
+      margin-left: 39px;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    position: relative;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: background-color, text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: red;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    &--activ::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  &__link-logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  &__link-logo:hover &__logo-text,
+  &__link-logo:focus &__logo-text {
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+  }
+
+  &__logo-text {
+    color: white;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.16;
+    margin-left: 10px;
+    transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__logo {
+    margin-top: -2px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link-logo:hover &__logo,
+  &__link-logo:focus &__logo {
+    box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+  }
+  @media screen and (max-width: 479px) {
+    &__logo-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.btn--access {
+  margin-right: 20px;
+}

@@ -1,0 +1,30 @@
+.footer {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545454;
+  }
+  &__link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400px;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545454;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: #ff6b08;
+    }
+  }
+}

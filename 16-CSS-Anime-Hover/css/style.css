@@ -1,0 +1,540 @@
+/* lesson 6 */
+.counter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.btn {
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+.tab {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin: 0 15px;
+  font-size: 44px;
+}
+/* option 2 */
+.container-title {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: brown;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 6em;
+  color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  transition: 500ms;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow: hidden;
+}
+h2:hover span:nth-child(1) {
+  transform: translateY(-18px);
+}
+h2 span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  transition: 500ms;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+h2:hover span:nth-child(2) {
+  transform: translateY(18px);
+}
+h2 span:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scaleY(0);
+  width: 91%;
+  color: #000;
+  background: #ff0;
+  font-size: 0.25em;
+  letter-spacing: 0.7em;
+  text-align: center;
+  padding-left: 20px;
+  margin-left: 5px;
+  transition: 500ms;
+}
+h2:hover span:nth-child(3) {
+  transform: translateY(-50%) scaleY(1);
+}
+/* option 3 */
+.link1 {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: rgb(5, 2, 79);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.link1 a {
+  position: relative;
+  padding: 10px 30px;
+  margin: 45px 0;
+  color: #21ebff;
+  text-decoration: none;
+  font-size: 50px;
+  text-transform: uppercase;
+  transition: 500ms;
+}
+@media screen and (max-width: 570px) {
+  .link1 a {
+    font-size: 30px;
+  }
+}
+.link1 a::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+.link1 a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+.link1 a:hover::before,
+.link1 a:hover::after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0ms;
+}
+.link1 a:hover {
+  background: #21ebff;
+  color: #000;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 500ms;
+}
+* {
+  user-select: none;
+}
+
+.div-js {
+  position: relative;
+}
+
+#app-cover {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 380px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#app {
+  position: relative;
+  height: 140px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#label-1 {
+  color: #5f6065;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#label-2 {
+  color: #aba9a9;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.option {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.circle {
+  left: 0;
+  width: 20px;
+  background-color: #eaecff;
+}
+
+.circle:before {
+  content: "";
+  width: 60px;
+  left: -90px;
+  background-color: #8898ff;
+  transition: 0.3s ease all;
+}
+
+.circle,
+.circle:before {
+  position: absolute;
+  top: 0;
+  height: 20px;
+  border-radius: 100px;
+}
+
+.option.selected .circle:before,
+.option .circle.move-right:before,
+.option .circle.width-exact:before {
+  left: 0;
+  width: 20px;
+}
+
+.option.selected .circle.increase-width:before,
+.option .circle.move-right:before {
+  left: -40px;
+  width: 60px;
+}
+
+.option.selected .circle.width-zero:before {
+  width: 0;
+}
+
+.option-text {
+  color: #5f6065;
+  padding-left: 34px;
+}
+
+#bg {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 130px;
+  height: 150px;
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-image: url(http://k003.kiwi6.com/hotlink/o0t7mldy36/batman.png);
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.6s cubic-bezier(0.18, 0.89, 0.29, 1.05) all;
+  z-index: 1;
+}
+
+#bg.superman {
+  background-image: url(http://k003.kiwi6.com/hotlink/12adunj55b/superman.png);
+}
+
+#bg.op {
+  opacity: 0;
+}
+
+#bg.nobg {
+  background-image: none;
+}
+
+#bg.big {
+  transform: scale(3);
+}
+
+/* option 1 */
+:root {
+  /** sunny side **/
+  --blue-background: #c2e9f6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--blue-background);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in;
+}
+
+.toggle--checkbox {
+  display: none;
+}
+
+.toggle--checkbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+  /** Change the cloud to stars **/
+  /** Change the sun into the moon **/
+  /** Show the dimples on the moon **/
+}
+
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 60px;
+  width: 5px;
+}
+
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  width: 5px;
+  height: 5px;
+  top: -25px;
+}
+
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  width: 5px;
+  height: 5px;
+  left: -30px;
+  top: 20px;
+}
+
+.toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+
+.toggle--label {
+  /** Placeholder element, starting at blue **/
+  width: 200px;
+  height: 100px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+  /** The sun cloud and moon stars **/
+  /** Sun/Moon element **/
+  /** Gray dots on the moon **/
+}
+
+.toggle--label-background {
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  background: var(--white);
+  left: 135px;
+  top: 45px;
+  transition: all 150ms ease-in;
+}
+
+.toggle--label-background:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -20px;
+  transition: all 150ms ease-in;
+}
+
+.toggle--label-background:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -10px;
+  transition: all 150ms ease-in;
+}
+
+.toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: "";
+  width: 82px;
+  height: 82px;
+  border: 5px solid var(--yellow-border);
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 82px;
+  background: var(--yellow-background);
+}
+
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  left: 143px;
+  top: 23px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@keyframes switch {
+  0% {
+    left: 4px;
+  }
+
+  60% {
+    left: 4px;
+    width: 112px;
+  }
+
+  100% {
+    left: 104px;
+    width: 82px;
+  }
+}
+
+@keyframes reverse {
+  0% {
+    left: 104px;
+    width: 82px;
+  }
+
+  60% {
+    left: 72px;
+    width: 112px;
+  }
+
+  100% {
+    left: 4px;
+  }
+}
+.opation {
+  display: flex;
+  justify-content: center;
+}
+/*  option 4  */
+.div-liquid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.div-liquid a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-sizing: border-box;
+}
+
+.div-liquid a span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+  padding: 0;
+}
+
+.div-liquid a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.div-liquid a .liquid::after,
+.div-liquid a .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.div-liquid a .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.div-liquid a .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+.div-liquid a:hover .liquid {
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}

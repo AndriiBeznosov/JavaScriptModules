@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--- Посмотреть какие стили идут от index -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <a href="../index.html">Главная</a>
+    <hr />
+
+    <form class="form-inline js-form">
+      <div><input type="text" class="input" name="input_text" /></div>
+      <button type="submit" class="btn">Искать</button>
+    </form>
+    <div class="js-pokemon"></div>
+
+    <div class="js-pokemon"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <div class="container">
+      <button type="button" class="btn js-btn">Нажать</button>
+      <ul class="user-list"></ul>
+    </div>
+
+    <script src="./js/pokemon.js" type="module"></script>
+  </body>
+</html>

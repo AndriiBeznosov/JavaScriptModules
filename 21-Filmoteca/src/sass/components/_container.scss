@@ -1,0 +1,22 @@
+.container {
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    width: 1280px;
+  }
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include tablet-max {
+    max-width: 768px;
+  }
+  @include mobile-max {
+    max-width: 480px;
+  }
+}
+
+// .header__logo {
+//   fill: white;
+//   background-color: aqua;
+// }

@@ -1,0 +1,64 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #21212150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  width: 806px;
+  height: 558px;
+  background-color: white;
+  padding: 40px 12px;
+  display: flex;
+  background-color: aqua;
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: black;
+      transform: rotate(-45deg);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: black;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin-left: 16px;
+  }
+}
+.con {
+  display: flex;
+}
