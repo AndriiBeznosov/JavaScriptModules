@@ -14,24 +14,24 @@ img {
   max-width: 100%;
   &--main {
     @include desktop {
-      background-image: url(/21-Filmoteca/src/img/images-min/header-desk.jpg);
+      background-image: url(../img/images-min/header-desk.jpg);
     }
     @include tablet {
-      background-image: url(/21-Filmoteca/src/img/images-min/header-tab.jpg);
+      background-image: url(../img/images-min/header-tab.jpg);
     }
     @include mobile-max {
-      background-image: url(/21-Filmoteca/src/img/images-min/header-mob.jpg);
+      background-image: url(../img/images-min/header-mob.jpg);
     }
   }
   &--library {
     @include desktop {
-      background-image: url(/21-Filmoteca/src/img/images-min/header2-desk.jpg);
+      background-image: url(../img/images-min/header2-desk.jpg);
     }
     @include tablet {
-      background-image: url(/21-Filmoteca/src/img/images-min/header2-tab.jpg);
+      background-image: url(../img/images-min/header2-tab.jpg);
     }
     @include mobile-max {
-      background-image: url(/21-Filmoteca/src/img/images-min/header2-mob.jpg);
+      background-image: url(../img/images-min/header2-mob.jpg);
     }
   }
 
